@@ -1,0 +1,14 @@
+<h1>BUSCADOR <small>{{termino}}</small></h1>
+<hr>
+
+<div class="row">
+
+    <div class="col-md-12" *ngIf='encontrados.length == 0'>
+        <div class="alert alert-info" role="alert">
+            No existen elementos con el termino: {{termino}}
+        </div>
+    </div>
+</div>
+<div class="card-columns ">
+    <app-heroe-tarjeta [heroe]="heroe" [index]="heroe.idx" *ngFor="let heroe of encontrados"></app-heroe-tarjeta>
+</div>
